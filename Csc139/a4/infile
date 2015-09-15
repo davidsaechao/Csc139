@@ -1,0 +1,12 @@
+Monitors rely critically on semaphores and condition variables.
+Assignment 4 offers an opportunity for you to use the mutex locks and
+condition variables as a synchronization mechanism in the context 
+of a file copying operation through bounded-buffer producer-consumer
+approach. Compared with the semaphore-based solution where the order 
+of two semaphore wait operations is of pivotal importance to avoid
+potential deadlocks, here when a thread has to suspend on a condition,
+the pthread_cond_wait will automatically release the mutex lock,
+thus circumventing potential deadlocks. Aside from that, much of 
+the logic in your assignment 3 can be reused. This exercise illustrates
+the point that there are different synchronization approaches to 
+a given problem.

@@ -1,0 +1,15 @@
+We had some detailed discussions on semaphores in class, and
+finally we get a chance to use semaphores to implement
+the bounded-buffer producer/consumer approach for a file copying
+application. This assignment requires you to create a producer thread
+and a consumer thread that work concurrently with a buffer of
+7 slots. The producer reads a string of 14-byte at a time from
+the input file (that is, this file), and writes it to the
+next available slot in the buffer in a mutually exclusive manner.
+The consumer, on the other hand, fetches a 14-byte string from
+the next filled buffer slot at a time, and writes it to
+the output file. When the process is finished, the output file
+is a verbatim copy of the input file. Semaphores are used for
+to enforce the mutually exclusive access to the buffer and
+the synchronization conditions between the two copying threads.
+Note that the last string processed may not be exactly 14-byte long.

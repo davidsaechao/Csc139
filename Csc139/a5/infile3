@@ -1,0 +1,1 @@
+a server process uses msgsnd and msgrcv system calls with message queue to provide services.

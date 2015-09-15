@@ -1,0 +1,1 @@
+to request/receive services, a client can use msgsnd and msgrcv system calls with message queue.
